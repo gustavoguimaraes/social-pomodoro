@@ -1,5 +1,5 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe Image, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Image, type: :model do
+  pending "Image needs model specs"
 end

@@ -1,58 +1,45 @@
 class AddressesController < ApplicationController
-  before_action :set_address, only: [:show, :edit, :update, :destroy]
+  before_action :set_address, only: [:show, :update, :destroy]
 
-  # GET /addresses
   def index
     @addresses = Address.all
+    render "/addresses"
   end
 
-  # GET /addresses/1
   def show
+    render "/address"
   end
 
-  # GET /addresses/new
-  def new
-    @address = Address.new
-  end
-
-  # GET /addresses/1/edit
-  def edit
-  end
-
-  # POST /addresses
   def create
     @address = Address.new(address_params)
 
     if @address.save
-      redirect_to @address, notice: 'Address was successfully created.'
+      render_success("Address was successfully created.")
     else
-      render :new
+      render_error(@address.descriptive_error)
     end
   end
 
-  # PATCH/PUT /addresses/1
   def update
     if @address.update(address_params)
-      redirect_to @address, notice: 'Address was successfully updated.'
+      render_success("Address was successfully updated.")
     else
-      render :edit
+      render_error(@address.descriptive_error)
     end
   end
 
-  # DELETE /addresses/1
   def destroy
     @address.destroy
-    redirect_to addresses_url, notice: 'Address was successfully destroyed.'
+    render_success("Address was successfully destroyed.")
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_address
-      @address = Address.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def address_params
-      params.require(:address).permit(:street_address, :extended_address, :city, :country, :postal_code)
-    end
+  def set_address
+    @address = Address.find(params[:id])
+  end
+
+  def address_params
+    params.require(:address).permit(Address::PERMITTED_PARAMS)
+  end
 end

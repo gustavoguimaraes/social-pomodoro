@@ -1,5 +1,9 @@
-Social-pomodoro
+Social Pomodoro
 ===============
+
+**Social**: with other people.
+
+**Pomodoro**: Alternating work and break times.
 
 Getting Started
 ---------------
@@ -7,7 +11,7 @@ Getting Started
 After you have cloned this repo, run this setup script to set up your machine
 with the necessary dependencies to run and test this app:
 
-    % ./bin/setup
+    ./bin/setup
 
 It assumes you have a machine equipped with Ruby, Postgres, etc. If not, set up
 your machine with [this script].
@@ -16,7 +20,7 @@ your machine with [this script].
 
 After setting up, you can run the application using [foreman]:
 
-    % foreman start
+    foreman start
 
 If you don't have `foreman`, see [Foreman's install instructions][foreman]. It
 is [purposefully excluded from the project's `Gemfile`][exclude].

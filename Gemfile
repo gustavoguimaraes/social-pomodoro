@@ -3,24 +3,26 @@ source "https://rubygems.org"
 ruby "2.1.3"
 
 gem "airbrake"
-gem "bourbon", "~> 3.2.1"
+gem "aws-sdk"
+gem "bourbon"
+gem "cancan"
 gem "coffee-rails"
 gem "delayed_job_active_record"
+gem "dragonfly"
+gem "dragonfly-s3_data_store"
 gem "email_validator"
-gem "flutie"
-gem "high_voltage"
+gem "excon"
+gem "flutie" # ???
 gem "i18n-tasks"
-gem "jquery-rails"
-gem "neat", "~> 1.5.1"
-gem "newrelic_rpm", ">= 3.7.3"
-gem "normalize-rails", "~> 3.0.0"
+gem "neat"
+gem "newrelic_rpm"
+gem "normalize-rails"
 gem "pg"
+gem "rabl"
 gem "rack-timeout"
 gem "rails", "4.1.6"
 gem "recipient_interceptor"
-gem "sass-rails", "~> 4.0.3"
-gem "simple_form"
-gem "title"
+gem "sass-rails"
 gem "uglifier"
 gem "unicorn"
 
@@ -35,18 +37,15 @@ group :development, :test do
   gem "dotenv-rails"
   gem "factory_girl_rails"
   gem "pry-rails"
-  gem "rspec-rails", "~> 3.0.0"
+  gem "rspec-rails"
 end
 
 group :test do
-  gem "capybara-webkit", ">= 1.2.0"
+  gem "capybara-webkit"
   gem "database_cleaner"
-  gem "formulaic"
-  gem "launchy"
+  gem "formulaic" # ???
+  gem "launchy" # ???
   gem "shoulda-matchers", require: false
   gem "timecop"
   gem "webmock"
-end
-
-group :staging, :production do
 end

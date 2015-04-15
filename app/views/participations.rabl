@@ -1,0 +1,2 @@
+collection @participations
+extends 'participation'

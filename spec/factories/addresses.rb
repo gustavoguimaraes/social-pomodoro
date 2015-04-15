@@ -1,10 +1,9 @@
 FactoryGirl.define do
   factory :address do
-    street_address "MyString"
-extended_address "MyString"
-city "MyString"
-country "MyString"
-postal_code "MyString"
+    street_address "123 main street"
+    extended_address "#30, ring at Dorian"
+    city "Berlin"
+    country "Germany"
+    postal_code "123ABC"
   end
-
 end

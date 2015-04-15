@@ -1,0 +1,2 @@
+collection @addresses
+extends 'address'

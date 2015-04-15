@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410183731) do
+ActiveRecord::Schema.define(version: 20150415165200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,12 +54,13 @@ ActiveRecord::Schema.define(version: 20150410183731) do
   add_index "events", ["address_id"], name: "index_events_on_address_id", using: :btree
 
   create_table "images", force: true do |t|
-    t.integer  "imageable_id",               null: false
-    t.string   "imageable_type",             null: false
-    t.string   "image_uid",                  null: false
-    t.string   "image_name"
-    t.integer  "image_height",   default: 0
-    t.integer  "image_width",    default: 0
+    t.integer  "imageable_id",                null: false
+    t.string   "imageable_type",              null: false
+    t.string   "image_uid",                   null: false
+    t.string   "image_name",     default: "", null: false
+    t.integer  "image_height",   default: 0,  null: false
+    t.integer  "image_width",    default: 0,  null: false
+    t.integer  "position",       default: 0,  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,7 +69,7 @@ ActiveRecord::Schema.define(version: 20150410183731) do
 
   create_table "participations", force: true do |t|
     t.integer  "user_id",    null: false
-    t.integer  "event_id",   null: false
+    t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -76,14 +77,19 @@ ActiveRecord::Schema.define(version: 20150410183731) do
   add_index "participations", ["event_id"], name: "index_participations_on_event_id", using: :btree
   add_index "participations", ["user_id"], name: "index_participations_on_user_id", using: :btree
 
-  create_table "roles", force: true do |t|
-    t.string   "kind",             null: false
-    t.integer  "participation_id", null: false
+  create_table "role_assignments", force: true do |t|
+    t.integer  "participation_id"
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "roles", ["participation_id"], name: "index_roles_on_participation_id", using: :btree
+  create_table "roles", force: true do |t|
+    t.string   "name",        default: "", null: false
+    t.string   "description", default: "", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name",        null: false

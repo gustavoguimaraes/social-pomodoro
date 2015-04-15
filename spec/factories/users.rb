@@ -1,8 +1,7 @@
 FactoryGirl.define do
   factory :user do
-    name "MyString"
-email "MyString"
-facebook_id 1
+    name "Dorian"
+    email "dorian@doma.io"
+    facebook_id 123
   end
-
 end

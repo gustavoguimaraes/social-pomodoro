@@ -18,16 +18,20 @@ common: &default_settings
     record_sql: obfuscated
     stack_trace_threshold: 0.500
     transaction_threshold: apdex_f
+
 development:
   <<: *default_settings
   monitor_mode: false
   developer_mode: true
+
 test:
   <<: *default_settings
   monitor_mode: false
+
 production:
   <<: *default_settings
   monitor_mode: true
+
 staging:
   <<: *default_settings
   app_name: "social-pomodoro (Staging)"

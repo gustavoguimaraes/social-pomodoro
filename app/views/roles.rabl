@@ -1,0 +1,2 @@
+collection @roles
+extends 'role'

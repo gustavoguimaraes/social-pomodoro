@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :role do
-    kind "MyString"
-participation nil
+    name "Facilitator"
+    description "Helps explain the Ninja game :D"
   end
-
 end

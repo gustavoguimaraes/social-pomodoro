@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="ROBOTS" content="NOODP" />
   <meta name="viewport" content="initial-scale=1" />
-  <title><%= title %></title>
+  <title>Social Pomodoro</title>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= body_class %>">
-  <%= render "flashes" -%>
+<body>
   <%= yield %>
-  <%= render "javascript" %>
+  <%= javascript_include_tag :application %>
+  <%= render "layouts/analytics" %>
 </body>
 </html>

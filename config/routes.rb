@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  resources :addresses
+  [:addresses, :events, :images, :participations, :roles, :users].each do |model|
+    resources model, only: [:index, :show, :create, :update, :destroy]
+  end
 
-  resources :events
-
-  resources :users
-
+  root to: "application#home"
 end

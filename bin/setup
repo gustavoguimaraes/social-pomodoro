@@ -18,10 +18,7 @@ if [ ! -f .env ]; then
   cp .sample.env .env
 fi
 
-# Set up database and add any development seed data
-bundle exec rake dev:prime
-
-# Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.zshenv
+# Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.bash_profile
 mkdir -p .git/safe
 
 # Pick a port for Foreman

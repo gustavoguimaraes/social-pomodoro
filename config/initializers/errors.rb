@@ -15,7 +15,8 @@ HTTP_ERRORS = [
   Net::HTTPBadResponse,
   Net::HTTPHeaderSyntaxError,
   Net::ProtocolError,
-  Timeout::Error
+  Timeout::Error,
+  Excon::Errors::SocketError
 ]
 
 SMTP_SERVER_ERRORS = [

@@ -1,8 +1,8 @@
 class CreateRoles < ActiveRecord::Migration
   def change
     create_table :roles do |t|
-      t.string :kind, null: false
-      t.references :participation, index: true, null: false
+      t.string :name, null: false, default: ""
+      t.string :description, null: false, default: ""
 
       t.timestamps
     end
