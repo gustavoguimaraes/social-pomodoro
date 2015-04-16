@@ -42,9 +42,6 @@ GEM
       multi_json (~> 1.0)
     aws-sdk-resources (2.0.38)
       aws-sdk-core (= 2.0.38)
-    bourbon (3.2.4)
-      sass (~> 3.2)
-      thor
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
@@ -59,13 +56,6 @@ GEM
       capybara (>= 2.3.0, < 2.5.0)
       json
     coderay (1.1.0)
-    coffee-rails (4.1.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.9.1)
     columnize (0.9.0)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
@@ -94,7 +84,6 @@ GEM
       activemodel
     erubis (2.7.0)
     excon (0.45.1)
-    execjs (2.5.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     factory_girl_rails (4.5.0)
@@ -222,16 +211,12 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
-    neat (1.5.1)
-      bourbon (>= 3.1)
-      sass (~> 3.2.19)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
     newrelic_rpm (3.11.2.286)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    normalize-rails (3.0.1)
     pg (0.18.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -281,12 +266,6 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.4)
     safe_yaml (1.0.4)
-    sass (3.2.19)
-    sass-rails (4.0.5)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2.2)
-      sprockets (~> 2.8, < 3.0)
-      sprockets-rails (~> 2.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
     slop (3.6.0)
@@ -313,9 +292,6 @@ GEM
     tins (1.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.1)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
     unicorn (4.8.3)
       kgio (~> 2.6)
       rack
@@ -333,11 +309,9 @@ DEPENDENCIES
   airbrake
   awesome_print
   aws-sdk
-  bourbon
   byebug
   cancan
   capybara-webkit
-  coffee-rails
   database_cleaner
   delayed_job_active_record
   dotenv-rails
@@ -349,9 +323,7 @@ DEPENDENCIES
   formulaic
   i18n-tasks
   launchy
-  neat
   newrelic_rpm
-  normalize-rails
   pg
   pry-rails
   rabl
@@ -359,11 +331,9 @@ DEPENDENCIES
   rails (= 4.1.6)
   recipient_interceptor
   rspec-rails
-  sass-rails
   shoulda-matchers
   spring
   spring-commands-rspec
   timecop
-  uglifier
   unicorn
   webmock

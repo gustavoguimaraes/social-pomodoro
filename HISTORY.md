@@ -11,3 +11,9 @@
 **15:36**: config/ + bin/ WIP, need homepage + test API
 
 **17:52**: spec/ left, all other files read and/or edited
+
+**21:29**: CRUD API working, needs specs
+
+## 16th april 2015:
+
+**12:51**: 404 page
