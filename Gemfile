@@ -12,7 +12,7 @@ gem "dragonfly"
 gem "dragonfly-s3_data_store"
 gem "email_validator"
 gem "excon"
-gem "flutie" # ???
+# gem "haml"
 gem "i18n-tasks"
 gem "neat"
 gem "newrelic_rpm"

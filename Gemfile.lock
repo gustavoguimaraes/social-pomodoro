@@ -102,7 +102,6 @@ GEM
       railties (>= 3.0.0)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
-    flutie (2.0.0)
     fog (1.29.0)
       fog-atmos
       fog-aws (~> 0.0)
@@ -347,7 +346,6 @@ DEPENDENCIES
   email_validator
   excon
   factory_girl_rails
-  flutie
   formulaic
   i18n-tasks
   launchy
