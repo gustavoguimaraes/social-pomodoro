@@ -1,7 +1,7 @@
-[Social Pomodoro](doma.io/social-pomodoro)
+[Social Pomodoro](https://doma.io/social-pomodoro)
 ===============
 
-See: doma.io/social-pomodoro
+See: https://doma.io/social-pomodoro
 
 Working on this project
 -----------------------
